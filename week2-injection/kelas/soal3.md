@@ -1,32 +1,30 @@
-1. Soal = Database Schema
+1. Soal = Login Bender
 2. Link =
 3. Jawaban =
 
 ### **Langkah-langkah Penyelesaian**
 
-Tujuan dari tantangan ini adalah untuk mengekstrak dan menampilkan struktur atau "skema" dari database aplikasi dengan memanfaatkan celah keamanan SQL Injection.
+Tantangan ini berfokus pada eksploitasi celah SQL Injection untuk masuk sebagai pengguna bernama "Bender" tanpa perlu mengetahui kata sandinya.
 
-1.  **Menemukan Titik Injeksi 🎯**
-    Langkah pertama adalah mengidentifikasi bagian mana dari aplikasi yang rentan. Untuk tantangan ini, celah keamanan berada pada **fitur pencarian produk**. Secara spesifik, *parameter* `q` pada URL yang digunakan untuk pencarian sangat rentan terhadap injeksi.
+1.  **Menemukan Email Bender 🕵️‍♂️**
+    Langkah pertama adalah mencari tahu alamat email yang digunakan oleh Bender. Hal ini dapat dilakukan dengan cara masuk sebagai **admin**, lalu mengakses halaman administrasi pengguna untuk melihat daftar semua pengguna terdaftar. Dari sana, kita menemukan bahwa email Bender adalah `bender@juice-sh.op`.
 
-2.  **Membuat *Payload* `UNION` Injection ✍️**
-    Kita akan menggunakan teknik injeksi `UNION SELECT` untuk menggabungkan hasil kueri kita dengan kueri pencarian produk yang asli. Kunci dari teknik ini adalah kita harus menebak jumlah kolom yang benar yang diambil oleh kueri asli.
+2.  **Melakukan Injeksi di Halaman Login 💉**
+    Setelah mengetahui emailnya, kembali ke halaman login. Alih-alih hanya memasukkan email, kita akan memasukkan *payload* SQL Injection secara langsung di **kolom email**.
 
-    Untuk tantangan ini, *payload* yang digunakan adalah:
+    *Payload* yang digunakan adalah:
 
     ```sql
-    test')) UNION SELECT 1, 2, 3, 4, 5, 6, 7, 8, sql FROM sqlite_schema--
+    bender@juice-sh.op' AND '1'='1' --
     ```
 
     **Penjelasan *Payload*:**
 
-      * `test'))`: Digunakan untuk menutup kueri asli dengan benar.
-      * `UNION SELECT`: Menggabungkan hasil kueri kita.
-      * `1, 2, ... 8, sql`: Kita memilih 8 nilai kosong dan mengambil data skema dari kolom `sql`.
-      * `FROM sqlite_schema`: Ini adalah tabel khusus di database SQLite yang menyimpan semua informasi tentang struktur database.
-      * `--`: Mengomentari sisa kueri asli agar tidak terjadi *error*.
+      * `bender@juice-sh.op'`: "Menutup" input string email yang valid.
+      * `AND '1'='1'`: Menambahkan kondisi yang hasilnya **selalu benar**.
+      * `--`: Mengubah sisa dari kueri SQL menjadi komentar, sehingga bagian pengecekan kata sandi akan diabaikan oleh database.
 
-3.  **Mengeksekusi Injeksi dan Mengekstrak Skema 🚀**
-    *Payload* tersebut dimasukkan ke dalam URL melalui parameter `q`. Ketika dieksekusi, aplikasi akan menampilkan hasil dari kueri injeksi kita alih-alih menampilkan hasil pencarian produk.
+    Kolom kata sandi bisa dikosongkan atau diisi dengan teks acak, karena tidak akan diperiksa.
 
-    Hasil yang ditampilkan adalah seluruh **skema database**, yang berisi informasi krusial seperti nama-nama tabel, kolom, dan tipe datanya. Informasi ini sangat berharga untuk memahami cara kerja aplikasi dan merencanakan eksploitasi lebih lanjut.
+3.  **Mendapatkan Akses ✅**
+    Setelah menekan tombol login, sistem akan memproses kueri yang telah dimanipulasi. Karena kondisi kueri selalu benar dan pengecekan kata sandi dilewati, otentikasi berhasil, dan Anda akan langsung masuk ke dalam akun milik Bender.
