@@ -1,6 +1,8 @@
-Soal - Login Admin
-Link Soal - https://juice-shop.herokuapp.com/#/login
-Jawaban : 
+1. Soal - Login Admin
+
+2. Link Soal - https://juice-shop.herokuapp.com/#/login
+
+3. Jawaban : 
 
 ### **Langkah-langkah Penyelesaian**
 
