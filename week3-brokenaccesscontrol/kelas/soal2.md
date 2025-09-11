@@ -1,9 +1,10 @@
-# Write-up Juice-Shop: Bagian Admin
+# Write-up Juice-Shop: Admin Section
 
 ## Ringkasan Tantangan
 
-**Judul:** Bagian Admin (Admin Section)  
-**Kategori:** Broken Access Control (Kontrol Akses yang Rusak)  
+**Judul:** Admin Section
+
+**Kategori:** Broken Access Control  
 **Tingkat Kesulitan:** ⭐⭐ (2/6)
 
 Tantangan "Bagian Admin" ini adalah tentang mengakses area administratif terlarang dari sebuah aplikasi web yang seharusnya tidak dapat dijangkau oleh pengguna biasa.
