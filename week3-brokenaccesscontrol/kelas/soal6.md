@@ -64,3 +64,6 @@ Untuk melindungi dari kerentanan CSRF:
   - **Gunakan Token Anti-CSRF**: Pastikan setiap pengiriman formulir yang sensitif menyertakan token unik dan rahasia yang divalidasi di sisi server. Token ini memastikan bahwa permintaan berasal dari aplikasi itu sendiri, bukan dari situs lain.
   - **Terapkan Atribut Same-Site pada Cookie**: Konfigurasikan *cookie* agar hanya dikirim dalam permintaan yang berasal dari situs yang sama (*Same-Site*). Ini adalah pertahanan yang sangat efektif yang sudah banyak diterapkan di peramban modern.
   - **Implementasikan Kebijakan CORS**: Konfigurasikan kebijakan *Cross-Origin Resource Sharing* (CORS) dengan benar untuk membatasi permintaan hanya ke domain yang tepercaya.
+<img width="2508" height="1521" alt="image" src="https://github.com/user-attachments/assets/ccfbc9f2-6004-41fe-8e9e-aab8985383b8" />
+<img width="831" height="1377" alt="image" src="https://github.com/user-attachments/assets/090b84b7-0624-47d3-abc2-6a71d675e01f" />
+
