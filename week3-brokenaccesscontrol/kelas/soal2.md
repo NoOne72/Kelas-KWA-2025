@@ -1,5 +1,3 @@
----
-
 # Write-up Juice-Shop: Bagian Admin
 
 ## Ringkasan Tantangan
