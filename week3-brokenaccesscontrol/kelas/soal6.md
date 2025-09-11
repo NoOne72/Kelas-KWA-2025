@@ -66,4 +66,5 @@ Untuk melindungi dari kerentanan CSRF:
   - **Implementasikan Kebijakan CORS**: Konfigurasikan kebijakan *Cross-Origin Resource Sharing* (CORS) dengan benar untuk membatasi permintaan hanya ke domain yang tepercaya.
 <img width="2508" height="1521" alt="image" src="https://github.com/user-attachments/assets/ccfbc9f2-6004-41fe-8e9e-aab8985383b8" />
 <img width="831" height="1377" alt="image" src="https://github.com/user-attachments/assets/090b84b7-0624-47d3-abc2-6a71d675e01f" />
-
+<img width="2556" height="1333" alt="image" src="https://github.com/user-attachments/assets/d52497e5-1be3-4887-8749-57afc847173b" />
+<img width="2195" height="213" alt="image" src="https://github.com/user-attachments/assets/17a44726-7cd3-4e95-b91b-6ac80eb3e033" />
