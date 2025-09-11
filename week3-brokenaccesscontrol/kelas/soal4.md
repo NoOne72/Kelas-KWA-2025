@@ -1,8 +1,4 @@
-Tentu, ini adalah *write-up* untuk tantangan "Five-Star Feedback" dalam bahasa Indonesia, dengan format yang sama seperti sebelumnya.
-
----
-
-# Write-up Juice-Shop: Umpan Balik Bintang Lima
+# Write-up Juice-Shop: Five Star Feedback
 
 ## Ringkasan Tantangan
 
@@ -10,7 +6,7 @@ Tentu, ini adalah *write-up* untuk tantangan "Five-Star Feedback" dalam bahasa I
 **Kategori:** Broken Access Control (Kontrol Akses yang Rusak)  
 **Tingkat Kesulitan:** ⭐⭐ (2/6)
 
-Tantangan "Umpan Balik Bintang Lima" ini menuntut kita untuk memanipulasi sistem ulasan pada aplikasi web dengan cara menghapus semua ulasan yang memiliki rating bintang lima.
+Tantangan "Five Star Feedback" ini menuntut kita untuk memanipulasi sistem ulasan pada aplikasi web dengan cara menghapus semua ulasan yang memiliki rating bintang lima.
 
 ---
 
@@ -36,6 +32,7 @@ Untuk menyelesaikan tantangan ini, kita perlu memanfaatkan akses admin yang suda
 
 
 *Gambar 1: Tampilan panel admin yang menunjukkan daftar umpan balik pengguna beserta tombol hapus.*
+<img width="998" height="957" alt="image" src="https://github.com/user-attachments/assets/80056560-c36c-4742-bfea-aa832b0667fa" />
 
 ---
 
