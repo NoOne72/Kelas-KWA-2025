@@ -29,21 +29,24 @@ Berikut adalah dekomposisi langkah-langkah teknis yang dieksekusi untuk menyeles
 
     Investigasi awal dilakukan dengan hipotesis bahwa aplikasi mungkin memiliki direktori atau path tersembunyi yang terkait dengan fungsionalitas pengembangan atau pengujian. Fokusnya adalah pada endpoint yang berhubungan dengan teknologi Web3.
 
-    ![alt text](images/tio-soal-1/image.png)
+   <img width="1481" height="876" alt="image" src="https://github.com/user-attachments/assets/a761268f-ceca-47ec-9738-b22615d4ccaa" />
+
 
 2. **Penemuan Endpoint Melalui Forced Browsing**
 
     * Teknik forced browsing atau enumerasi direktori manual digunakan untuk menemukan path yang tidak tertaut dari antarmuka utama. Berdasarkan nama-nama direktori pengembangan yang umum (`/sandbox`, `/test`, `/dev`), beberapa variasi URL dicoba.
 
-    ![alt text](images/tio-soal-1/image-1.png)
+  <img width="1481" height="740" alt="image" src="https://github.com/user-attachments/assets/479f3e0f-6c67-4829-ae67-666bd5c0a09c" />
 
-    ![alt text](images/tio-soal-1/image-2.png)
+  <img width="1469" height="610" alt="image" src="https://github.com/user-attachments/assets/fd250364-fe8d-4e01-8efa-82c549f2de70" />
 
-    ![alt text](images/tio-soal-1/image-3.png)
+  <img width="1466" height="587" alt="image" src="https://github.com/user-attachments/assets/1dc35d33-ee05-4720-94e0-1eb1212b7538" />
 
-    * Upaya ini berhasil mengidentifikasi path yang valid: `/#/web3-sandbox`.
 
-    ![alt text](images/tio-soal-1/image-4.png)
+   * Upaya ini berhasil mengidentifikasi path yang valid: `/#/web3-sandbox`.
+
+   <img width="1476" height="743" alt="image" src="https://github.com/user-attachments/assets/7db8962d-6106-4ee8-82e1-d97c438c9fd5" />
+
 
 3. **Akses dan Validasi**
 
@@ -53,7 +56,8 @@ Berikut adalah dekomposisi langkah-langkah teknis yang dieksekusi untuk menyeles
 
     *Bukti Screenshot (Antarmuka Web3 Sandbox):*
 
-    ![alt text](images/tio-soal-1/image-5.png)
+    <img width="1471" height="604" alt="image" src="https://github.com/user-attachments/assets/f282a25b-8bfe-486e-a338-28c39d9a1129" />
+
 
 ### Catatan Hasil Percobaan
 
