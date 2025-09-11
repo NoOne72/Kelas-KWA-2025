@@ -1,4 +1,5 @@
 Nama Soal = Admin Section
+
 Langkah Penyelesaian 
 
 1. Karena kita diminta untuk masuk ke bagian administrator maka kita tinggal mencoba memasukkan endpoint /administration. Namun masih ditemukan kegagalan karena kita tidak memiliki akses.
